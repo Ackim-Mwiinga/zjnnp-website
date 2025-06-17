@@ -1,0 +1,14 @@
+node_modules
+.env
+.env.*
+.git
+.gitignore
+README.md
+package-lock.json
+yarn.lock
+public/build
+build
+*.log
+*.md
+*.json
+*.mdx
