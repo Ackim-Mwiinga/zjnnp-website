@@ -1,0 +1,24 @@
+/* Typography */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  line-height: 1.8;
+  color: var(--text-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  margin: 0 0 10px;
+}
+
+p {
+  margin: 0 0 15px;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--link-hover-color);
+}

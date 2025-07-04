@@ -37,3 +37,6 @@ backend/.env.production.local
 .env.production.local
 
 .vercel
+
+# Local Netlify folder
+.netlify

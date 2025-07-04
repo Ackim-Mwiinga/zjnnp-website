@@ -1,0 +1,17 @@
+/* Dashboard Styles */
+.dashboard {
+  padding: 20px;
+}
+
+.dashboard h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.dashboard .card {
+  padding: 20px;
+  background: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  margin-bottom: 20px;
+}

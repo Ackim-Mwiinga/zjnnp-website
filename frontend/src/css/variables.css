@@ -1,0 +1,11 @@
+/* CSS Variables */
+:root {
+    --primary-color: #103b55;
+    --secondary-color: #1f5f43;
+    --background-color: #f1eee9;
+    --light-accent: #f0f8ff;
+  --text-color: #333;
+  --link-color: #004080;
+  --link-hover-color: #003366;
+  --border-color: #ddd;
+}

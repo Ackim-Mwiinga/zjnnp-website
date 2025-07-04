@@ -1,0 +1,830 @@
+/* Custom Components */
+.hero {
+    position: relative;
+    padding: 8rem 0;
+    background: linear-gradient(to right, var(--medical-blue), var(--medical-teal));
+    color: white;
+    text-align: center;
+}
+
+.hero::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    opacity: 0.1;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    font-family: serif;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.search-input {
+    position: relative;
+}
+
+.search-input input {
+    padding-left: 1.5rem;
+    padding-right: 2.5rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-radius: 0.5rem;
+    background-color: white;
+    border: 1px solid var(--medical-muted);
+}
+
+.search-input input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--medical-blue);
+    border-color: transparent;
+}
+
+.search-input .search-icon {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--medical-muted);
+}
+
+.submit-button {
+    background: linear-gradient(to right, var(--medical-blue), var(--medical-teal));
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.submit-button:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* Hero Section */
+.hero {
+    background-attachment: fixed; /* Enable parallax effect */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 120px 20px;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for contrast */
+    z-index: -1;
+}
+
+.hero .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    padding: 40px 20px;
+}
+
+.hero h1 {
+    color: white; /* Set the text color to white */
+    font-size: 2.5rem; /* Optional: Adjust font size */
+    margin-bottom: 20px; /* Optional: Add spacing below the heading */
+    font-weight: bold; /* Optional: Make the text bold */
+}
+
+.hero .cta-buttons {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideIn 1s ease-out 0.5s forwards; /* Delayed animation */
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Medical Cases Section */
+.medical-cases {
+    background-color: white;
+    padding: 40px 0;
+}
+
+.medical-cases h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.medical-cases p {
+    color: #666;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.cases-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 0 15px;
+}
+
+.case-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.case-card:hover {
+    transform: translateY(-5px);
+}
+
+.case-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.case-content {
+    padding: 20px;
+}
+
+.case-content h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.case-content p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.case-details {
+    color: #888;
+    margin-bottom: 15px;
+}
+
+.case-details span {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.case-card .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.case-card .btn:hover {
+    opacity: 0.9;
+}
+
+/* Topics Page Styles */
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.article-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+}
+
+.article-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.article-card p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.article-meta {
+    color: #888;
+    margin-bottom: 15px;
+}
+
+.article-meta span {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.article-card .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.article-card .btn:hover {
+    opacity: 0.9;
+}
+
+/* Email Signup Section */
+.email-signup-section {
+    background-color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.email-signup {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.email-signup h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #103b55;
+}
+
+.email-signup p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.email-input {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.email-input input {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px;
+    font-size: 1rem;
+    width: 280px;
+}
+
+.email-input button {
+    padding: 12px 24px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.email-input button:hover {
+    background-color: #218838;
+}
+
+/* Picture Prognosis */
+.picture-prognosis {
+    background-color: white;
+    padding: 30px;
+    margin: 40px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.picture-prognosis h2 {
+    color: #0f3b56;
+    margin-bottom: 20px;
+}
+
+.prognosis-content {
+    display: flex;
+    gap: 20px;
+}
+
+.prognosis-image {
+    width: 200px;
+    height: 150px;
+    background-color: #eee;
+    border-radius: 5px;
+}
+
+.prognosis-text {
+    flex: 1;
+}
+
+.prognosis-options {
+    margin-top: 15px;
+}
+
+.prognosis-option {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Cureus U Section */
+.cureus-u {
+    background-color: #f0f7ff;
+    padding: 30px;
+    margin: 40px 0;
+    border-radius: 5px;
+}
+
+.cureus-u h2 {
+    color: #0f3b56;
+    margin-bottom: 15px;
+}
+
+.cureus-u p {
+    margin-bottom: 15px;
+}
+
+/* Top Articles */
+.top-articles {
+    margin: 40px 0;
+}
+
+.top-articles h2 {
+    color: #0f3b56;
+    margin-bottom: 20px;
+}
+
+.article-filters {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.filter-btn {
+    padding: 5px 15px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.filter-btn.active {
+    background-color: var(--secondary-color);
+    color: white;
+    border-color: var(--secondary-color);
+}
+
+.article-card {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Trending Topics */
+.trending-topics {
+    margin: 40px 0;
+}
+
+.trending-topics h2 {
+    color: #0f3b56;
+    margin-bottom: 20px;
+}
+
+.topics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.topic-card {
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* Journal Metrics */
+.journal-metrics {
+    background-color: white;
+    padding: 30px;
+    margin: 40px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.journal-metrics h2 {
+    color: #0f3b56;
+    margin-bottom: 20px;
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.metric-card {
+    text-align: center;
+}
+
+.metric-value {
+    font-size: 28px;
+    font-weight: bold;
+    color: #0f3b56;
+    margin-bottom: 5px;
+    transition: all 0.3s ease;
+}
+
+.metric-label {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Featured Authors */
+.featured-authors {
+    margin: 40px 0;
+}
+
+.featured-authors h2 {
+    color: #0f3b56;
+    margin-bottom: 20px;
+}
+
+.authors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.author-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.author-name {
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+/* Footer Section */
+footer {
+    background-color: #103b55; /* Dark primary color for the footer background */
+    color: white; /* White text for contrast */
+    padding: 40px 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid layout */
+    gap: 20px;
+}
+
+.footer-col h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #f1f1f1; /* Slightly lighter white for headings */
+}
+
+.footer-col p,
+.footer-col ul {
+    font-size: 0.9rem;
+    color: #ccc; /* Light gray for text */
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #f1f1f1; /* Lighter white on hover */
+}
+
+.social-links {
+    display: flex;
+    gap: 10px;
+}
+
+.social-links a {
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #1f5f43; /* Secondary color for hover effect */
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.8rem;
+    color: #ccc;
+}
+
+/* Minimalist Typography */
+h1, h2, h3, p {
+    font-family: 'Roboto', sans-serif;
+    color: var(--primary-color);
+}
+
+/* Clean Buttons */
+.btn {
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+/* Responsive Layouts */
+@media screen and (max-width: 768px) {
+    /* Header */
+    .header-top {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .logo, .nav-menu, .header-links {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .nav-menu {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    /* Hero Section */
+    .hero h1 {
+        font-size: 1.8rem;
+        line-height: 1.3;
+    }
+    
+    .cta-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+    
+    /* Picture Prognosis */
+    .prognosis-content {
+        flex-direction: column;
+    }
+    
+    .prognosis-image {
+        width: 100%;
+        height: auto;
+        margin-bottom: 15px;
+    }
+    
+    /* Article Cards */
+    .article-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .article-image img {
+        width: 100%;
+        height: auto;
+        max-height: 200px;
+    }
+    
+    /* Article Filters */
+    .article-filters {
+        flex-wrap: wrap;
+    }
+    
+    /* Email Signup */
+    .email-input {
+        flex-direction: column;
+    }
+    
+    .email-input input,
+    .email-input button {
+        width: 100%;
+        border-radius: 5px;
+    }
+    
+    /* Editorial Team */
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+/* Tablet Adjustments */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    /* Adjust header spacing */
+    .nav-menu {
+        gap: 10px;
+    }
+    
+    /* Article Cards */
+    .article-card {
+        flex-direction: column;
+    }
+    
+    .article-image img {
+        width: 100%;
+        height: auto;
+    }
+    
+    /* Editorial Team */
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Small Mobile Adjustments */
+@media screen and (max-width: 480px) {
+    /* Hero Section */
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+    
+    /* Picture Prognosis */
+    .prognosis-options {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    /* Topics Grid */
+    .topics-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Metrics Grid */
+    .metrics-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Mobile Menu Styles */
+.hamburger-menu {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 101;
+}
+
+.hamburger-bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+/* Mobile View */
+@media screen and (max-width: 768px) {
+    .hamburger-menu {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background-color: white;
+        flex-direction: column;
+        padding: 80px 20px 20px;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        transition: right 0.3s ease;
+        z-index: 100;
+    }
+    
+    .nav-menu.active {
+        right: 0;
+    }
+    
+    .nav-menu a {
+        padding: 15px 0;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .header-links {
+        display: none; /* Hide these links in mobile - can be shown in menu */
+    }
+    
+    /* Animate hamburger to X when active */
+    .hamburger-menu.active .hamburger-bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    .hamburger-menu.active .hamburger-bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger-menu.active .hamburger-bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    
+    /* Add overlay when menu is open */
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0,0,0,0.5);
+        z-index: 99;
+        display: none;
+    }
+    
+    .overlay.active {
+        display: block;
+    }
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+/* Highlighted Buttons */
+.cta-buttons .btn {
+    background-color: var(--primary-color); /* Primary color for the buttons */
+    color: white; /* White text for contrast */
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    display: inline-block;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+.cta-buttons .btn:hover {
+    background-color: var(--secondary-color); /* Change background color on hover */
+    color: white; /* Ensure text remains white */
+    transform: scale(1.1); /* Slightly enlarge the button on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+}

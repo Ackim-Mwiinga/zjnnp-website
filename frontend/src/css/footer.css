@@ -1,0 +1,31 @@
+/* Footer Styles */
+footer {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 20px 0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.footer-col h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-col ul li a:hover {
+  text-decoration: underline;
+}

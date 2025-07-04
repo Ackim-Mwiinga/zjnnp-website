@@ -1,0 +1,284 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply bg-background text-primary font-roboto;
+}
+
+.container {
+  @apply w-4/5 mx-auto overflow-hidden;
+}
+
+/* Header Styles */
+.header {
+  @apply bg-white text-text pt-8 pb-4 border-b border-gray-300;
+}
+
+.header-top {
+  @apply flex justify-between items-center px-5;
+}
+
+.logo img {
+  @apply w-36;
+}
+
+/* Navigation Menu */
+.nav-menu {
+  @apply flex gap-5;
+}
+
+.nav-menu a {
+  @apply text-text no-underline px-2.5 py-1.5 rounded transition-colors duration-300 hover:bg-gray-100;
+}
+
+/* Header Links (Sign In / Join Now) */
+.header-links {
+  @apply flex gap-5;
+}
+
+.header-links a {
+  @apply text-white bg-blue-500 px-3.5 py-2 rounded no-underline transition-colors duration-300 hover:bg-blue-700;
+}
+
+/* Hero Section */
+
+.hero h1 {
+  @apply text-4xl mb-5;
+}
+
+.cta-buttons a {
+  @apply text-white bg-blue-500 px-6 py-3 rounded no-underline transition-colors duration-300 hover:bg-blue-700;
+}
+
+/* Email Signup Section */
+.email-signup-section {
+  @apply bg-gray-100 py-12 text-center;
+}
+
+.email-signup h3 {
+  @apply mb-5;
+}
+
+.email-input {
+  @apply flex justify-center gap-2.5;
+}
+
+.email-input input[type="email"] {
+  @apply px-2.5 py-2 border border-gray-300 rounded w-72;
+}
+
+.email-input button {
+  @apply bg-green-500 text-white px-5 py-2 rounded cursor-pointer transition-colors duration-300 border-none hover:bg-green-700;
+}
+
+/* Footer Styles */
+footer {
+  @apply bg-gray-800 text-white py-5 text-center;
+}
+
+.footer-grid {
+  @apply grid grid-cols-4 gap-5 mb-5;
+}
+
+.footer-col h3 {
+  @apply border-b border-white pb-1.5 mb-2.5;
+}
+
+.footer-col ul {
+  @apply list-none p-0;
+}
+
+.footer-col ul li {
+  @apply mb-1.5;
+}
+
+.footer-col ul li a {
+  @apply text-white no-underline;
+}
+
+.social-links a {
+  @apply text-white mx-2.5 text-2xl;
+}
+
+.copyright {
+  @apply mt-5 text-sm;
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+  @apply hidden flex-col justify-around w-7.5 h-6.25 bg-transparent border-none cursor-pointer p-0 z-10;
+}
+
+.hamburger-bar {
+  height: 3px;
+  background: #333;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+
+  .header-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo {
+    margin-bottom: 20px;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-menu a {
+    margin-bottom: 10px;
+  }
+
+  .header-links {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: flex;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile Styles */
+.mobile-signin,
+.mobile-join {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-signin,
+  .mobile-join {
+    display: block;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    text-align: center;
+  }
+
+  .mobile-signin {
+    background-color: #007bff;
+  }
+
+  .mobile-join {
+    background-color: #28a745;
+  }
+}
+
+.copyright {
+  margin-top: 20px;
+  font-size: 0.8em;
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+}
+
+.hamburger-bar {
+  height: 3px;
+  background: #333;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+
+  .header-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo {
+    margin-bottom: 20px;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-menu a {
+    margin-bottom: 10px;
+  }
+
+  .header-links {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: flex;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile Styles */
+.mobile-signin,
+.mobile-join {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-signin,
+  .mobile-join {
+    display: block;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    text-align: center;
+  }
+
+  .mobile-signin {
+    background-color: #007bff;
+  }
+
+  .mobile-join {
+    background-color: #28a745;
+  }
+}

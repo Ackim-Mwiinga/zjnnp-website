@@ -1,0 +1,40 @@
+services:
+  - type: web
+    name: zjnnp-frontend
+    env: node
+    buildCommand: npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+    minMemory: 512
+    maxMemory: 1024
+    disk: 1024
+    ports:
+      - port: 3000
+        protocol: http
+
+  - type: web
+    name: zjnnp-backend
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 5000
+    minMemory: 512
+    maxMemory: 1024
+    disk: 1024
+    ports:
+      - port: 5000
+        protocol: http
+
+  - type: database
+    name: zjnnp-db
+    database: mongodb
+    size: 1024
+    envVars:
+      - key: MONGODB_URI
+        value: "mongodb://localhost:27017/zjnnp-db"

@@ -1,0 +1,13 @@
+node_modules
+.env
+.env.*
+.git
+.gitignore
+README.md
+package-lock.json
+yarn.lock
+build
+*.log
+*.md
+*.json
+*.mdx
